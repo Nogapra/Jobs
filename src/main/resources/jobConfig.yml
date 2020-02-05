@@ -1352,8 +1352,8 @@ Jobs:
       dark_oak_trapdoor:
         income: 1.5
         points: 1.5
-        experience: 2
-      stone_bricks:
+        experience: 3.0
+      WHEAT-7:
         income: 1.5
         points: 1.5
         experience: 2
@@ -2044,35 +2044,17 @@ Jobs:
         income: 1
         points: 1
         experience: 1.0
-      nether_wart:
+      NETHER_WART-3:
         income: 1
         points: 1
         experience: 1.0
     Place:
-      #new 1.13 blocks
-      dead_tube_coral_fan:
-        income: 2
-        points: 2
-        experience: 3
-      dead_brain_coral_fan:
-        income: 2
-        points: 2
-        experience: 3
-      dead_bubble_coral_fan:
-        income: 2
-        points: 2
-        experience: 3
-      dead_fire_coral_fan:
-        income: 2
-        points: 2
-        experience: 3
-      dead_horn_coral_fan:
-        income: 2
-        points: 2
-        experience: 3
-
-      wheat:
-        income: 1
+      WHEAT-0:
+        income: 3.0
+        points: 3
+        experience: 3.0
+      SUGAR_CANE_BLOCK:
+        income: 1.0
         points: 1
         experience: 1
       potatoes:
@@ -3366,5 +3348,12 @@ Jobs:
     shortname: N
     ChatColour: WHITE
     chat-display: none
-    income-progression-equation: baseincome+(baseincome*(joblevel-1)*0.01)-((baseincome+(baseincome*(joblevel-1)*0.01)) * ((numjobs-1)*0.05))
-    points-progression-equation: basepoints+(basepoints*(joblevel-1)*0.01)-((basepoints+(basepoints*(joblevel-1)*0.01)) * ((numjobs-1)*0.05))
+    #max-level: 10
+    #slots: 10
+    leveling-progression-equation: 10*(joblevel)+(joblevel*joblevel*4)
+    income-progression-equation: baseincome+(baseincome*(joblevel-1)*0.01)-((baseincome+(joblevel-1)*0.01) * ((numjobs-1)*0.05))
+    points-progression-equation: basepoints+(basepoints*(joblevel-1)*0.01)-((basepoints+(joblevel-1)*0.01) * ((numjobs-1)*0.05))
+    experience-progression-equation: baseexperience-(baseexperience*((numjobs-1) *0.01))
+    Kill:
+      Player:
+        income: 7.5
